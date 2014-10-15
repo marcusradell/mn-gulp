@@ -14,7 +14,10 @@
     "type": "git",
     "url": "https://github.com/marcusnielsen/mn-gulp.git"
   },
-  "author": "Marcus Nielsen",
+  "author": {
+      "name": "Marcus Nielsen",
+      "email": "marcus.nielsen82@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/marcusnielsen/mn-gulp/issues"
