@@ -1,6 +1,6 @@
 {
   "name": "mn-gulp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A configurable gulp builder.",
   "main": "index.js",
   "keywords": [
@@ -15,8 +15,8 @@
     "url": "https://github.com/marcusnielsen/mn-gulp.git"
   },
   "author": {
-      "name": "Marcus Nielsen",
-      "email": "marcus.nielsen82@gmail.com"
+    "name": "Marcus Nielsen",
+    "email": "marcus.nielsen82@gmail.com"
   },
   "license": "MIT",
   "bugs": {
@@ -36,12 +36,11 @@
     "gulp-nodemon": "^1.0.4",
     "gulp-sourcemaps": "^1.1.0",
     "gulp-watch": "^0.6.9",
+    "lodash": "^2.4.1",
     "require-dir": "^0.1.0",
     "run-sequence": "^0.3.6",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^1.0.2"
   },
-  "devDependencies": {
-    "lodash": "^2.4.1"
-  }
+  "devDependencies": {}
 }
