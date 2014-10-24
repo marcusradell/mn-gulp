@@ -1,6 +1,6 @@
 {
   "name": "mn-gulp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A configurable gulp builder.",
   "main": "index.js",
   "keywords": [
@@ -37,10 +37,16 @@
     "gulp-sourcemaps": "^1.1.0",
     "gulp-watch": "^0.6.9",
     "lodash": "^2.4.1",
+    "partialify": "^3.1.1",
     "require-dir": "^0.1.0",
     "run-sequence": "^0.3.6",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^1.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+    "browserify": {
+        "transforms": [
+            "partialify"
+        ]
+    }
 }
