@@ -1,3 +1,7 @@
+var defaultConfig = require('./config')
+var _ = require('lodash')
+
 module.exports = function (config) {
-    require('./gulp')(config || require('./config'));
-};
+  var mergedConfig = _.defaults(config,  defaultConfig)
+    require('./gulp')(mergedConfig)
+}
