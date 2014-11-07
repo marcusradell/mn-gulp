@@ -1,4 +1,6 @@
-'use strict';
+var requireDir = require('require-dir')
 
-require('require-dir')('./subtasks');
-require('require-dir')();
+module.exports = function (config) {
+  requireDir('./subtasks')(config)
+  requireDir('.')(config)
+}

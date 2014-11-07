@@ -1,5 +1,5 @@
-'use strict';
+var gulp = require('gulp')
 
-var gulp = require('gulp');
-
-gulp.task('default', ['build']);
+module.exports = function (config) {
+  gulp.task('default', ['build'])
+}

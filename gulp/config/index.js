@@ -1,5 +1,3 @@
-'use strict';
-
 var config = {
   clean: './dist',
   nodemon: {

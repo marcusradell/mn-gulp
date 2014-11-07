@@ -1,11 +1,10 @@
-'use strict';
+var gulp = require('gulp')
+var livereload = require('gulp-livereload')
 
-var config = require('./../config');
-var gulp = require('gulp');
-var livereload = require('gulp-livereload');
-
+module.exports = function(config) {
 gulp.task('moveCss', function () {
   return gulp.src(config.css.cssSource)
     .pipe(gulp.dest(config.css.dest))
-    .pipe(livereload({auto: false}));
-});
+    .pipe(livereload({auto: false}))
+})
+}
