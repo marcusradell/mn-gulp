@@ -1,4 +1,3 @@
-var gulp = require('gulp')
 var livereload = require('gulp-livereload')
 var browserify = require('browserify')
 var watchify = require('watchify')
@@ -6,18 +5,18 @@ var nodemon = require('gulp-nodemon')
 var gulpWatch = require('gulp-watch')
 var _ = require('lodash')
 
-require('./subtasks/clean')
-require('./subtasks/browserify')
-require('./subtasks/less')
-require('./subtasks/html')
-require('./subtasks/moveLocalization')
+require('./../subtasks/clean')
+require('./../subtasks/browserify')
+require('./../subtasks/less')
+require('./../subtasks/html')
+require('./../subtasks/moveLocalization')
 
-module.exports = function (config) {
+module.exports = function (gulp, config) {
   gulp.task('watch', function () {
     var browserifyArgs = { debug: true }
     var bundler = watchify(browserify(_.merge(watchify.args, browserifyArgs)))
 
-    var makeBundle = require('./bundleHelper')(bundler)
+    var makeBundle = require('./../bundleHelper/index')(bundler)
     bundler.on('update', makeBundle)
 
             // TODO: Decide what to do with the HTML pipe. Partialify or copy? Both?

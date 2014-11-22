@@ -1,11 +1,10 @@
 var sourcemaps = require('gulp-sourcemaps')
 var less = require('gulp-less')
 var csso = require('gulp-csso')
-var gulp = require('gulp')
 var livereload = require('gulp-livereload')
 var concat = require('gulp-concat')
 
-module.exports = function(config) {
+module.exports = function(gulp, config) {
 gulp.task('less', function () {
   return gulp.src(config.css.lessSource)
     .pipe(sourcemaps.init())

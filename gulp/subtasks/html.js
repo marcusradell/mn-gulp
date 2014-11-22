@@ -1,8 +1,7 @@
 var htmlmin = require('gulp-htmlmin')
-var gulp = require('gulp')
 var livereload = require('gulp-livereload')
 
-module.exports = function(config) {
+module.exports = function(gulp, config) {
 gulp.task('html', function () {
   return gulp.src(config.html.source)
     .pipe(htmlmin({collapseWhitespace: true}))

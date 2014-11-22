@@ -1,7 +1,6 @@
 var browserify = require('browserify')
-var gulp = require('gulp')
 
-module.exports = function(config) {
+module.exports = function(gulp, config) {
 gulp.task('browserify', function () {
 
   //TODO: Fix minification. After trying uglifyify and minifyify, the first one didn't work and the second one crashed.

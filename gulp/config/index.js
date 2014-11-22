@@ -1,3 +1,5 @@
+// TODO: Set a root path variable.
+
 var config = {
   clean: './dist',
   nodemon: {
