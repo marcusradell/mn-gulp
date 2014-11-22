@@ -33,6 +33,6 @@ var config = {
     //TODO: Enable linting for tests when tests are stable.
     source: ['!./node_modules/**/*', '!./dist/**/*', '!./server/test/**/*', './**/*.js']
   }
-};
+}
 
-module.exports = config;
+module.exports = config

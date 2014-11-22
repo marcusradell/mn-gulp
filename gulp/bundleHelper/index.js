@@ -1,9 +1,10 @@
 var vinylSourceStream = require('vinyl-source-stream')
 var livereload = require('gulp-livereload')
-var gulp = require('gulp')
 
-module.exports = function (config) {
+module.exports = function (gulp, config) {
+  console.log('test')
   var bundleHelper = function (bundler) {
+    console.log('test2')
     bundler.add(config.browserify.source)
 
     // TODO: Make below code work! Try upgrading minifyify later on.
@@ -19,4 +20,6 @@ module.exports = function (config) {
 
     return makeBundle
   }
+
+  return bundleHelper
 }
