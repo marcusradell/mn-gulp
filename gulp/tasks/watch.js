@@ -16,7 +16,7 @@ module.exports = function (gulp, config) {
     var browserifyArgs = { debug: true }
     var bundler = watchify(browserify(_.merge(watchify.args, browserifyArgs)))
 
-    var makeBundle = require('./../bundleHelper/index')(bundler)
+    var makeBundle = require('./../bundleHelper/index')(gulp, config)(bundler)
     bundler.on('update', makeBundle)
 
             // TODO: Decide what to do with the HTML pipe. Partialify or copy? Both?
