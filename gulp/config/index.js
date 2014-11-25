@@ -3,7 +3,7 @@
 var config = {
   clean: './dist',
   nodemon: {
-    start: './server/server.js',
+    start: './server/index.js',
     source: './server',
     ext: 'html js'
   },
@@ -11,18 +11,18 @@ var config = {
     source: './client/app-module.js',
     dest: {
       filename: 'bundle.js',
-      path: './dist/js'
+      path: './dist'
     },
     sourceMapFileName: 'bundle.map.json'
   },
   html: {
     source: './client/**/*.html',
-    dest: './dist/html'
+    dest: './dist'
   },
   css: {
     lessSource: './client/**/*.less',
     cssSource: './client/**/*.css',
-    dest: './dist/css',
+    dest: './dist',
     sourcemaps: './maps'
   },
   localization: {
