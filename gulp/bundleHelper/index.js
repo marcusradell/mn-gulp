@@ -9,6 +9,8 @@ module.exports = function (gulp, config) {
     // bundler.plugin('minifyify', {map: 'bundle.map.json', output: 'bundle.map.json'});
 
     var makeBundle = function () {
+      // TODO: Add ng-annotate.
+      bundler.transform('brfs')
       bundler
         .bundle()
         .pipe(vinylSourceStream(config.browserify.dest.filename))

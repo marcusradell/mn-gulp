@@ -1,6 +1,6 @@
 {
   "name": "mn-gulp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A configurable gulp builder.",
   "main": "index.js",
   "keywords": [
@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/marcusnielsen/mn-gulp",
   "dependencies": {
+    "brfs": "^1.2.0",
     "browserify": "^5.9.3",
+    "browserify-ngannotate": "^0.4.0",
     "del": "^0.1.1",
     "gulp": "^3.8.6",
     "gulp-concat": "^2.3.4",
@@ -41,11 +43,5 @@
     "run-sequence": "^0.3.6",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^1.0.2"
-  },
-  "devDependencies": {},
-  "browserify": {
-    "transforms": [
-      "partialify"
-    ]
   }
 }
