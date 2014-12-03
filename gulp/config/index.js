@@ -1,37 +1,40 @@
 // TODO: Set a root path variable.
 
 var config = {
-  clean: './dist',
+  clean: ['./dist', '!./dist/.git'],
   nodemon: {
-    start: './server/index.js',
+    start: './dist/server/index.js',
     source: './server',
-    ext: 'html js'
+    ext: 'js'
+  },
+  server: {
+    source: './server/**/*.js',
+    dest: './dist/server'
   },
   browserify: {
-    source: './client/app-module.js',
+    source: './client/index.js',
     dest: {
       filename: 'bundle.js',
-      path: './dist'
+      path: './dist/client'
     },
     sourceMapFileName: 'bundle.map.json'
   },
   html: {
-    source: './client/**/*.html',
-    dest: './dist'
+    source: './client/index.html',
+    dest: './dist/client'
   },
   css: {
     lessSource: './client/**/*.less',
     cssSource: './client/**/*.css',
-    dest: './dist',
+    dest: './dist/client',
     sourcemaps: './maps'
   },
-  localization: {
-    source: './client/localization/**/*',
-    dest: './dist/localization'
+  copy: {
+    source: ['./.gitignore', 'gulpfile.js', 'package.json', 'Procfile'],
+    dest: './dist'
   },
   lint: {
-    //TODO: Enable linting for tests when tests are stable.
-    source: ['!./node_modules/**/*', '!./dist/**/*', '!./server/test/**/*', './**/*.js']
+    source: ['!./**/node_modules/**/*', '!./dist/**/*', './**/*.js']
   }
 }
 

@@ -5,11 +5,13 @@ var nodemon = require('gulp-nodemon')
 var gulpWatch = require('gulp-watch')
 var _ = require('lodash')
 
+// TODO: Refactor and use an index.js in subtasks and tasks folders.
+// TODO: Rename move* to copy*.
 require('./../subtasks/clean')
 require('./../subtasks/browserify')
 require('./../subtasks/less')
 require('./../subtasks/html')
-require('./../subtasks/moveLocalization')
+require('./../subtasks/copy')
 
 module.exports = function (gulp, config) {
   gulp.task('watch', function () {
@@ -24,8 +26,8 @@ module.exports = function (gulp, config) {
       gulp.start('html')
     })
 
-    gulpWatch({glob: config.localization.source}, function () {
-      gulp.start('moveLocalization')
+    gulpWatch({glob: config.copy.source}, function () {
+      gulp.start('copy')
     })
 
     gulpWatch({glob: config.css.cssSource}, function () {
@@ -34,6 +36,10 @@ module.exports = function (gulp, config) {
 
     gulpWatch({glob: config.css.lessSource}, function () {
       gulp.start('less')
+    })
+
+    gulpWatch({glob: config.server.source}, function () {
+      gulp.start('moveServer')
     })
 
     nodemon({ script: config.nodemon.start, ext: config.nodemon.ext, watch: config.nodemon.source })
