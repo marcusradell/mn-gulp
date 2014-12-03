@@ -1,7 +1,7 @@
 // TODO: Set a root path variable.
 
 var config = {
-  clean: ['./dist', '!./dist/.git'],
+  clean: ['./dist/**/*', './dist/.*', '!./dist/.git/**/*'],
   nodemon: {
     start: './dist/server/index.js',
     source: './server',
