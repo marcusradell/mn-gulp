@@ -1,3 +1,7 @@
+Warning
+=======
+This readme is not yet in synch with the project.
+
 mn-gulp
 =======
 An attempt to componentize the most used gulp tasks.
