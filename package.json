@@ -1,6 +1,6 @@
 {
   "name": "mn-gulp",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A configurable gulp builder.",
   "main": "index.js",
   "keywords": [
