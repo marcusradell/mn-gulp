@@ -30,7 +30,7 @@ var config = {
     sourcemaps: './maps'
   },
   copy: {
-    source: ['./.gitignore', 'gulpfile.js', 'package.json', 'Procfile', 'firebase.json'],
+    source: ['./.gitignore', 'gulpfile.js', 'package.json', 'Procfile', 'firebase.json', 'firebase-rules.json'],
     dest: './dist'
   },
   lint: {
