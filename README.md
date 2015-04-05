@@ -4,8 +4,9 @@ My personal project for rapid SPA development.
 
 #Setup
 ##Install
-* npm install -g gulp (if needed)
-* copy the `sample-project` content to your root directory.
+* `npm install -g gulp` (if needed).
+* Copy the `sample-project` content to your root directory.
+* `npm install`.
 
 ##package.json
 * Replace all the `[...]` markers with correct values.
