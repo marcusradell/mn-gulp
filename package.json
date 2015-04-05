@@ -1,10 +1,15 @@
 {
   "name": "mn-gulp",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "A configurable gulp builder.",
   "main": "index.js",
   "keywords": [
-    "gulp"
+    "gulp",
+    "angularjs",
+    "browserify",
+    "brfs",
+    "firebase",
+    "livereload"
   ],
   "private": false,
   "engines": {
