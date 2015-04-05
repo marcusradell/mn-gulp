@@ -1,67 +1,37 @@
-Warning
-=======
-This readme is not yet in synch with the project.
+MN-Gulp Sample
+==============
+My personal project for rapid SPA development.
 
-mn-gulp
-=======
-An attempt to componentize the most used gulp tasks.
+#Setup
+##Install
+* npm install -g gulp (if needed)
+* copy the `sample-project` content to your root directory.
 
-Install
-=======
-    npm install -g gulp (if needed)
-    npm install gulp --save-dev
-    npm install mn-gulp --save-dev
+##package.json
+* Replace all the `[...]` markers with correct values.
 
-Quick setup
-===========
-Create gulpfile.js under root.
-Paste in:
+##Routing
+Uses angular-ui router.
 
-    var gulp = require('gulp')
-    require('mn-gulp')(gulp)
+* See `client/config.js` for sample code.
 
-Create a directory under root named 'client'.
-Change to the 'client' directory.
+##Component
 
-Create a file named 'app-module.js'.
-Paste in:
 
-    require('angular')
+#Running locally
+##Gulp tasks
+* Run `gulp build` to build to `dist/`.
+* Run `gulp watch` to start the live reload server in `dist/server/`.
+* `gulp/subtasks/` and `gulp/bundleHelper/` are used internally by `gulp/tasks/`.
+* `gulp/tasks/` lists all callable gulp tasks and should be your reference point. Check the code!
 
-    angular.module('app', []).controller('appController', function ($scope) {
-    $scope.vm = {
-      test: 'Hulk smash!'
-    }
 
-Create a file named 'index.html'.
-Paste in:
+#Hosting on Firebase
+* Create a project on firebase.com with static hosting for your client.
+* Replace the `[...]` with your project name.
+* Globally install the firebase CLI via npm.
+* Build the project with gulp.
+* `cd dist/`
+* `firebase deploy`
+* Done! Go to your site.
 
-    <!DOCTYPE html>
-    <html ng-app="app" ng-controller="appController">
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-    <h1>Testing mn-gulp</h1>
-    <div ng-bind="app.test"></div>
-    <script src="bundle.js"></script>
-    </body>
-    </html>
-
-Create a directory named 'server' with a file named 'index.js'.
-Paste in the content of 'mn-gulp/sample-server/index.js' into your own server file.
-
-Run a gulp task like 'gulp watch'.
-
-You should now have a dist directory created under root.
-
-Try localhost:3000 in your browser, and add an 'alert('test') to your 'client/app-module.js'-file.
-Press save to see the alert in your browser window.
-
-Usage
-=====
-The filenames under 'mn-gulp/gulp/tasks' are the callable gulp tasks.
-
-The config can be copied out to your own variable, tweaked, and then sent into mn-gulp as the last parameter.
-The user config does not need to be complete, and the default options will act as fallbacks.

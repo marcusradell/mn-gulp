@@ -1,0 +1,12 @@
+{
+  "firebase": "[...]",
+  "public": "./client",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**",
+    "server/**"
+  ],
+
+  "rules": "firebase-rules.json"
+}
