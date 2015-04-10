@@ -1,6 +1,9 @@
 var fs = require('fs')
+var path = require("path")
+var changeCase = require("change-case")
 
-var moduleName = 'mnAuthentication'
+var moduleName = path.basename(changeCase.camel(path.basename(__dirname)))
+
 var controllerName = moduleName + 'Controller'
 
 var directiveFn = function () {

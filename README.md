@@ -1,12 +1,24 @@
 MN-Gulp Sample
 ==============
 My personal project for rapid SPA development.
+It's based on making GUI components in an MV* style.
+
+What's in the goodie bag?
+
+* Angularjs without the ng-controller crap. Everything is a directive.
+* Browserify to automate the setup of directives. No reason for lazy coding any more.
+* Express static file server included. You can extend it as needed.
+* Gulp has a config that you can override and extend with more tasks.
+* Live reload via gulp. Hit save and let magic happen. Even the server restarts.
 
 #Setup
 ##Install
-* `npm install -g gulp` (if needed).
+* `npm install -g gulp` if needed. (Pro tip: Google on how to avoid global npm packages.)
 * Copy the `sample-project` content to your root directory.
 * `npm install`.
+
+##.gitignore
+* Rename `.npmignore` to `.gitignore`.
 
 ##package.json
 * Replace all the `[...]` markers with correct values.
@@ -34,17 +46,16 @@ Uses angular-ui router.
 Uses angular and browserify to make a resuable angular directive.
 
 * Copy and paste `client/components/mn-authentication` content into a new folder `shortnamespace-component`.
-* Change `index.js` variable `moduleName` to `shortnamespaceComponent`.
 * Update `template.html`.
 * Update `controller.js`.
 * Update `repository.js`.
-* Add or remove files from `index.js` if they aren't needed.
+* Add or remove files from `index.js` as they are / are not needed.
 * Use components in your `ui-view` `template.html` files.
 
 #Running locally
 ##Gulp tasks
-* Run `gulp build` to build to `dist/`.
-* Run `gulp watch` to start the live reload server in `dist/server/`.
+* Run `gulp build` to build to `dist/`. Also runs on `npm postinstall`.
+* Run `gulp watch` to start the live reload server in `dist/server/`. Also works with `npm start`.
 * `gulp/subtasks/` and `gulp/bundleHelper/` are used internally by `gulp/tasks/`.
 * `gulp/tasks/` lists all callable gulp tasks and should be your reference point. Check the code!
 
@@ -58,3 +69,6 @@ Uses angular and browserify to make a resuable angular directive.
 * `firebase deploy`
 * Done! Go to your site.
 
+
+#Known issues
+* When the server reloads, the client needs to be automatically refreshed.

@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcusnielsen/[...]"
+    "url": "https://github.com/[...]/[...]"
   },
-  "author": "Marcus Nielsen <marcus.nielsen82@gmail.com> (http://github.com/marcusnielsen/)",
+  "author": "[...] <[...]@[...]> (http://github.com/[...]/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marcusnielsen/[...]/issues"
+    "url": "https://github.com/[...]/[...]/issues"
   },
-  "homepage": "https://github.com/marcusnielsen/[...]",
+  "homepage": "https://github.com/[...]/[...]",
   "dependencies": {
     "angular": "^1.3.6",
     "angular-ui-router": "^0.2.11",
@@ -22,6 +22,7 @@
     "gulp": "^3.8.10",
     "lodash": "^2.4.1",
     "mn-gulp": "^0.2.5",
-    "moment": "^2.8.4"
+    "moment": "^2.8.4",
+    "change-case": "^2.3.0"
   }
 }
