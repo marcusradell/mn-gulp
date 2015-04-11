@@ -5,6 +5,10 @@
     "type": "git",
     "url": "https://github.com/[...]/[...]"
   },
+  "scripts": {
+    "postinstall": "gulp build",
+    "start": "gulp watch"
+  },
   "author": "[...] <[...]@[...]> (http://github.com/[...]/)",
   "license": "MIT",
   "bugs": {
